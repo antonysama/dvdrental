@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+    db:
+        image: postgres:alpine
+        restart: always
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+            PGDATA: /tmp
+        volumes:
+            - ./scrape:/var/lib/postgresql/data/scrape
+
+    adminer:
+        image: adminer
+        restart: always  
+        depends_on: 
+            - db      
+        ports:
+            - 8081:8080
+
+volumes:
+    scrape: 
