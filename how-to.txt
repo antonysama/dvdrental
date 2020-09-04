@@ -1,0 +1,13 @@
+docker-compose up
+docker ps
+docker exec -it <container> sh
+/ # wget https://s3.amazonaws.com/assets.datacamp.com/course/sql/dvdrental.zip; unzip dvdrental.zip
+/ # su postgres 
+/ $ psql 
+dvdrental=# CREATE DATABASE sakila;
+dvdrental=# ctrl+D
+/$ git 
+/$ psql
+postgres=# \l
+postgres=# \c sakila
+postgres=# \dt
