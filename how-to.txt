@@ -6,7 +6,7 @@ docker exec -it <container> sh
 / $ psql 
 dvdrental=# CREATE DATABASE sakila;
 dvdrental=# ctrl+D
-/$ git 
+/$ pg_restore -U postgres -d sakila '/var/lib/postgresql/data/scrape/dvdrental.tar'
 /$ psql
 postgres=# \l
 postgres=# \c sakila
