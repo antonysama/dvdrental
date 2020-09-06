@@ -11,3 +11,4 @@ dvdrental=# ctrl+D
 postgres=# \l
 postgres=# \c sakila
 postgres=# \dt
+localhost:8081
